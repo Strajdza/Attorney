@@ -1,0 +1,608 @@
+body{
+  width: 100%;
+  margin: auto;
+  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif; 
+  font: 10px;
+}
+*{
+box-sizing:border-box;
+}
+#bg{
+  
+    position:absolute;   
+    inset: 0;          
+    z-index: -1;       
+    background-image: url("../Kancelarija.jpeg");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+#navigacija{
+  width: 100%;
+  height: 4.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+h1{
+  text-align: center;
+  color: white;
+}
+h2{
+  color: white;
+}
+a{
+  text-decoration: none;
+  color:white;
+  font-size: 20px;
+  
+  
+}
+a:hover{
+  transition: 0.2s;
+  transform: scale(1.3);
+  transform-origin: center;
+  color: black;
+}
+.tekstovi{
+  color: black;
+  display: flex;
+  font-size: 15px;
+  gap: 0.2rem;
+}
+.aktivan{
+  color: white;
+}
+
+.dd{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.1rem;
+}
+.ddm {
+   position: absolute;
+  top: 100%;       
+  left: 0;  
+  padding: 5px 0;
+  background: white;
+  min-width: 5rem;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+}
+.ddm a {
+  width: 100%;          
+  padding: 0px 10px;    
+  color: black;
+  text-align: left;     
+  display: block;       
+}
+
+.ddm a:hover {
+  background-color: rgba(0,0,0,0.1); 
+}
+.dd:hover .ddm {
+  display: flex;
+}
+.zastave{
+  height: 0.9rem;
+  width: 1.5rem;
+}
+#mi{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#glavni{
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+.card {
+  width: 20rem;
+  height: 20rem;
+  perspective: 70rem;
+  
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px
+}
+
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-back {
+  color: white;
+  display: flex;
+  background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("../Natpis.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+img{
+  border-radius: 15px;
+}
+#usluge{
+  margin-top: 5vh;
+  text-align: center;
+
+}
+#bord{
+  height: 30rem;
+  width: 0.2rem;
+  margin-left: 1.3rem;
+  background-color: white;
+}
+#favor{
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  flex-wrap: nowrap;
+}
+#both{
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  align-items: center;
+  margin-left: 7vh;
+}
+#opis{
+ height: auto;
+  max-width: 600px;
+  min-width: 600px;
+ background-color: rgb(0, 0, 26);
+ justify-self: left;
+ margin-left: 5vh;
+}
+.uslg{
+  margin: 0;
+  border:2px;
+  border-style: solid;
+  background-color: rgb(38, 38, 38);
+  border-color: white;
+  
+  overflow:hidden;
+}
+.ispisi{
+  margin:0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.5s ease, opacity 0.4s ease;
+}
+.ispisi.open{
+  opacity: 1;
+}
+.pop-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.3s ease-out;
+  
+}
+
+.pop-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#text{
+  opacity: 1;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  
+}
+#text2{
+  color: white;
+  position: absolute;
+  opacity: 0;
+  white-space: nowrap;
+}
+#klijenti{
+  margin-top: 5vh;
+  border-top: 3px;
+  border-bottom: 3px;
+  border-color: white;
+  border-left: 0cap;
+  border-right: 0cap;
+  border-style: solid;
+  justify-self: center;
+}
+#clients{
+  
+display: flex;
+  font-size: 50px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  min-width: 500px;
+  height: 70px;
+;
+}
+
+#izabran{
+   background-color: white;
+  transition: 0.5s;
+  transform: scale(1.75);
+}
+#krugovi{
+  display: flex;
+  gap: 1rem;
+}
+.krug{
+  height: 0.8rem;
+  border-radius: 50%;
+  width: 0.8rem;
+  background-color: rgb(38, 38, 38);
+}
+#contact{
+  display: flex;
+  flex-direction: column;
+height: 22rem;
+width: 40%;
+background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../Mejl.jpeg");
+background-size: cover;
+background-position: center;
+border-radius: 15px;
+margin-left: 5vh;
+justify-items: center;
+text-align: center;
+justify-self: left;
+}
+#message{
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  top: 25%;
+  height: 10rem;
+  width: 12rem;
+  background-color: white;
+   z-index: 9999;
+}
+#ok{
+  height: 3rem;
+  width: 4rem;
+  background-color: black;
+  color: white;
+}
+#kontakt{
+  display: flex;
+  justify-content:left;
+  width: 100%;
+  align-items: center;
+  
+}
+#dugme{
+  height: 2rem;
+  width: 5rem;
+  text-align: center;
+  
+}
+#dugme:hover,#ok:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+  background-color: white;
+  color: black;
+}
+
+input{
+  margin-top: 1vh;
+  
+}
+iframe:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.inp{
+  height: auto;
+  border-radius: 15px;
+  width: 140px; 
+  flex-shrink: 0;
+}
+.inputi {
+  display: flex;
+  gap: 2rem;          
+  justify-content: center;
+  flex-wrap: nowrap; 
+}
+#onama{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Zajedno.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  
+}
+#zastup{
+  text-align: left;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Statua.jpeg");;
+  background-position: right;
+  background-size: cover;
+  color: white;
+}
+#Kanc{
+  color: white;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../Udz.jpeg");;
+  background-position: center;
+  background-size: cover;
+}
+#poruka {
+  height: 10rem;
+  width: 53%;
+  max-width: 500px;
+  box-sizing: border-box;
+  padding-bottom: 20vh;
+}
+.naslov{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+#brojevi{
+  height: 20rem;
+width: 40%;
+background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../Tel.jpeg");
+background-position: bottom;
+background-size:cover;
+border-radius: 15px;
+margin-left: auto;
+margin-right: 5vh;
+}
+#or{
+ margin-left: auto;
+  
+}
+#contactForm{
+  transition: 0.5s;
+}
+.brojevi{
+  color:white;
+  font-size: 30px;
+  margin-left: 3rem;
+}
+footer{
+  margin-top: 5rem;
+  height: 15rem;
+  background-color: rgb(38, 38, 38);  
+  text-align: center;
+
+}
+#rand{
+  font-size: 0px;
+}
+#foot{
+  margin-top: 2rem;
+  color: white;
+
+}
+#bt{ 
+  justify-self: center;
+  border-top: 0.1rem;
+  width: 80%;
+  border-color: white;
+  border-style: solid; 
+  margin-bottom: 1rem;
+}
+#bb{
+  justify-self: center;
+  margin-top: 1rem;
+  border-bottom: 0.1rem;
+  width: 60%;
+  border-color: white;
+  border-style: solid; 
+} 
+
+#inside{
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+
+  
+  .card-back{
+  font-size: 0.65rem;
+  padding: 10px;
+  line-height: 1.3;
+}
+#contactForm{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  #navigacija{
+    gap: 1rem;
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  a{
+    font-size: 16px;
+  }
+
+ 
+  #glavni{
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card{
+    width: 14rem;
+    height: 14rem;
+  }
+
+
+  #favor{
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #opis{
+    min-width: auto;
+    max-width: 90%;
+    margin-left: 0;
+  }
+
+  #both{
+    margin-left: 0;
+  }
+
+  #bord{
+    display:none;
+  }
+
+ 
+  #clients{
+    font-size: 30px;
+  }
+
+
+ #kontakt{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#contact{
+  width: 90%;
+height: auto;
+padding-bottom: 20px;
+  max-width: 420px;
+  margin: 0;
+}
+#brojevi{
+  width: 90%;
+  max-width: 420px;
+  margin: 0;
+}
+
+#or{
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+.brojevi{
+  font-size: 22px;
+  margin-left: 1.5rem;
+}
+#poruka{
+  width: 90%;
+  height: 120px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  resize: none;
+}
+  #dugme,
+#ok{
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+#dugme:active,
+#ok:active{
+  transform: scale(0.9);
+}
+input{
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+input:focus{
+  outline: 2px solid white;
+}
+
+  .inputi{
+  width: 90%;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+  .inp{
+  width: 100%;
+}
+  #poruka{
+    width: 90%;
+  }
+
+
+  .brojevi{
+    font-size: 22px;
+    margin-left: 1rem;
+  }
+  footer{
+  height: auto;
+  padding-bottom: 1rem;
+}
+#inside{
+  display: flex;
+  flex-direction: row;     
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;          
+}
+  iframe{
+  width: 180px;
+  height: 130px;
+}
+
+}
