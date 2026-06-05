@@ -1,0 +1,65 @@
+body{
+    margin: auto;
+    width: 100%;
+}
+
+#Signup{
+    --glow-colour:rgb(184, 0, 230);
+    background-color: black;
+    align-items: center;
+    justify-self: center;
+    background-color: aliceblue;
+    height: 29rem;
+    width: 20rem;
+    border-radius: 7%;
+    animation: flickerrLog 2s infinite alternate;
+    background-color: black;
+}
+#Signup p{
+    color: white;
+    text-align: center;
+}
+.inputs{
+    height: 1rem;
+    margin-right: 1rem;
+}
+#Signup div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#Signup p{
+    justify-self: left;
+    margin-left: 1rem;
+}
+#button{
+    height: 2rem;
+    width: 7rem;
+    font-family: 'Cal Sans';font-size: 22px;
+    background-color:rgb(184, 0, 230);
+    color: white;
+    margin-left: 6.5rem;
+}
+#button:hover{
+    background-color: black;
+    transition: 0.2s;
+}
+.LogLinks{
+    color:rgb(184, 0, 230); ;
+}
+@keyframes flickerrLog {
+    from{
+        box-shadow:
+    0 0 0.1rem  var(--glow-colour),
+  0 0 0.2rem var(--glow-colour),
+  0 0 0.4rem var(--glow-colour),
+  0 0 0.8rem var(--glow-colour);
+  }to{
+    box-shadow: 
+  0 0 0.3rem var(--glow-colour),
+  0 0 0.6rem var(--glow-colour),
+  0 0 0.9rem var(--glow-colour),
+  0 0 1rem var(--glow-colour);
+  }
+    }
+

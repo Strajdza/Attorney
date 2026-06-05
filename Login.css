@@ -1,0 +1,31 @@
+#Login{
+    --glow-colour:rgb(184, 0, 230);
+    align-items: center;
+    justify-self: center;
+    color: white;
+    height: 20rem;
+    width: 25rem;
+    border-radius: 7%;
+    animation: flickerrLog 2s infinite alternate;
+    background-color: black;
+}
+#Login div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#Login p{
+    margin-left: 1rem;
+}
+.inputs{
+    margin-right: 1rem;
+    height: 1rem;
+}
+#button{
+    margin-left: 9rem;
+}
+#confirmation{
+    text-align: center;
+    justify-self: left;
+    font-size: 20px;
+}

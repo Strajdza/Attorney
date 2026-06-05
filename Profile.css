@@ -1,0 +1,216 @@
+#Display{
+
+display: flex;
+gap: 2rem;
+width: 90%;
+height: 12rem;
+align-items: center;
+animation: flicker 2s infinite alternate;
+justify-self: center;
+}
+#Display_games{
+margin-top: 2rem;
+display: flex;
+width: 90%;
+height: 40rem;
+align-items: center;
+justify-content: left;
+animation: flicker 2s infinite alternate;
+justify-self: center;
+}
+.Loaded{
+    opacity: 1;
+    transition: 0.5s;
+}
+.Loading{
+    opacity: 0;
+}
+:root {
+  --bgcolor: gray;
+}
+@keyframes flicker {
+    from{
+      box-shadow:
+    0 0 0.1rem  var(--glow-colour),
+  0 0 0.2rem var(--glow-colour),
+  0 0 0.4rem var(--glow-colour),
+  0 0 0.8rem var(--glow-colour);
+  }to{
+    box-shadow: 
+  0 0 0.3rem var(--glow-colour),
+  0 0 0.6rem var(--glow-colour),
+  0 0 0.9rem var(--glow-colour),
+  0 0 1rem var(--glow-colour);
+  }
+} 
+.cropModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.cropBox {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background: black;
+}
+    
+#pfp{
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+}
+#hovey{
+    position: absolute;
+    background-color: black;
+    height: 10rem;
+    color: white;
+    width: 10rem;
+    opacity: 0%;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    justify-content: center;
+    
+}
+label{
+    margin-left: 1rem;
+}
+#hovey p{
+    margin-top: 3.75rem;
+}
+#hovey:hover{
+    transition: 0.5s;
+    opacity: 50%;
+    
+    
+}
+#user_name{
+    color: white;
+    font-size: 40px;
+    min-height: 52px;
+  min-width: 120px;
+}
+#pfpinp{
+    display: none;
+}
+#listOfGames::-webkit-scrollbar {
+  display: none;
+}
+#logout{
+    color: red;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: 'Cal Sans';font-size: 22px;
+    padding: 0;
+}
+#Display_games{
+    display: flex;
+    flex-direction: column;
+}
+#Platforms_disp{
+    display: flex;
+}
+.Platforms_prop{
+    display: flex;
+    transition: 0.5s;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    height: auto;
+    width: 3rem;
+    justify-content: center;
+}
+#Activated{
+    background-color: var(--bgcolor);
+    
+}
+.Platforms{
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+}
+#connbtn{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+#Steambtn{
+    background-color: green;
+    color: white;
+    width: 5rem;
+    margin-left: 2.7rem;
+}
+#listOfGames{
+    text-align: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    max-height: 35rem;
+    min-height: 35rem;
+    width: 90%;
+    color: white;
+    scrollbar-width: 0px;
+    background-color: var(--bgcolor);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#Archive{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 30rem;
+    min-height: 30rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+    justify-content: center;
+    gap: 3rem;
+}
+.Games{
+    margin-top: 2rem;
+      width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+
+}
+.Games img{
+    width: 100%;
+  height: 250px;
+  object-fit: cover;
+  pointer-events: none;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+.Games:hover{
+    scale: 1.05;
+    transition: 0.5s;
+}
+
+.headerFallback{
+    background-color: black;
+    height: 130px;
+    object-fit: cover;
+    align-self: flex-end;
+    
+}
+#searchbar{
+    height: 1rem;
+}
+.addBtn {
+  position: relative;
+  z-index: 9999;
+  background: red;
+}
